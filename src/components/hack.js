@@ -6,7 +6,7 @@ class Hack extends Component {
   componentWillMount() {
     this
       .props
-      .fetchHackathon({keyword: 'hackathon', address: 'San Francisco'})
+      .fetchHackathon({keyword: 'hackathon', address: 'San Francisco'});
   }
   renderHackathons() {
     if (this.props.hackathons.hackathons) {
@@ -45,7 +45,7 @@ class Hack extends Component {
     return (
       <div className="hack">
         <div className="container">
-          <h1>Hack</h1>
+          <h1>Hack around @San Francisco</h1>
           <div className="list-group">
             {this.renderHackathons()}
           </div>
