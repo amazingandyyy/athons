@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const VENDER_LIBS = [
   "faker",
@@ -31,10 +32,19 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/
       }, {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract({
+          loader: "sass-loader"
+        })
+      },{
+        test: /\.(jpe?g|png|gif|svg)$/,
         use: [
-          'style-loader', 'css-loader'
-        ],
-        test: /\.css$/
+          {
+            loader: 'url-loader',
+            options: { limit: 40000 }
+          },
+          'image-webpack-loader'
+        ]
       }
     ]
   },
@@ -45,8 +55,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
+    new ExtractTextPlugin('style.css'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
-  ]
+  ],
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './',
+    hot: true
+  },
 };

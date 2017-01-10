@@ -1,0 +1,15 @@
+body {
+    padding-top: 50px;
+    background-color: rgba(0,0,0,0.06);
+}
+
+@media (min-width: 767px) { 
+    .center-block {
+        max-width: 500px;
+        margin: auto;
+    }
+ }
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700,800');
+@import './header';
+@import './home'

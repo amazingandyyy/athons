@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import reduxThunk from 'redux-thunk';
-
+import './styles/style.scss';
 import App from './components/app';
 import Home from './components/home';
 import Public from './components/public';
@@ -26,7 +26,7 @@ if (token) {
 }
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
       <Route path="/" component= {App}>
         <IndexRoute component= {Home} />
         <Route path="/public" component= {Public} />
@@ -38,4 +38,4 @@ ReactDOM.render(
       </Route>
     </Router>
   </Provider>
-  , document.querySelector('.container'));
+  , document.querySelector('.app'));

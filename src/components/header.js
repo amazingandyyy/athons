@@ -15,10 +15,10 @@ class Header extends Component {
             return (
                 [
                     <li className="nav-item active" key="1">
-                        <Link to="/signin" className="nav-link">Sign in</Link>
+                        <Link to="/signin" className="nav-link">Signin</Link>
                     </li>,
                     <li className="nav-item" key="2">
-                        <Link to="/signup" className="nav-link">Sign Up</Link>
+                        <Link to="/signup" className="nav-link">SignUp</Link>
                     </li>
                 ]
             )
@@ -26,9 +26,8 @@ class Header extends Component {
     }
     render() {
         return (
-            <nav
-                className="navbar navbar-fixed-top navbar-full navbar-dark bg-primary bg-faded">
-                <Link className="navbar-brand" to="/">MERN</Link>
+            <nav className="navbar navbar-light bg-faded navbar-toggleable-xl navbar-inverse fixed-top">
+            <Link className="navbar-brand" to="/">Athons</Link>
                 <span  className="float-left">
                     <ul className="nav navbar-nav">
                         <li className="nav-item">
@@ -39,12 +38,12 @@ class Header extends Component {
                         </li>
                     </ul>
                 </span>
-                <span className="float-right">
+                <span className="pull-xs-right">
                     <ul className="nav navbar-nav">
                         {this.renderSignButton()}
                     </ul>
                 </span>
-            </nav>
+                </nav>
         )
     }
 }
@@ -56,3 +55,23 @@ function mapStateToProps({auth}){
 }
 
 export default connect(mapStateToProps, actions)(Header)
+
+// <nav
+//                 className="navbar navbar-fixed-top navbar-full navbar-dark bg-primary bg-faded">
+//                 <Link className="navbar-brand" to="/">MERN</Link>
+//                 <span  className="float-left">
+//                     <ul className="nav navbar-nav">
+//                         <li className="nav-item">
+//                             <Link className="nav-link" to="/public">Public</Link>
+//                         </li>
+//                         <li className="nav-item">
+//                             <Link className="nav-link" to="/secret">Secret</Link>
+//                         </li>
+//                     </ul>
+//                 </span>
+//                 <span className="float-right">
+//                     <ul className="nav navbar-nav">
+//                         {this.renderSignButton()}
+//                     </ul>
+//                 </span>
+//             </nav>
