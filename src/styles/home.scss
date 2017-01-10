@@ -1,16 +1,38 @@
 .jumbotron {
+    font-family: 'Alegreya Sans', sans-serif;
     background: #00DEAF;
 
     .display-5 {
         font-weight: 700;
-        font-family: 'Alegreya Sans', sans-serif;
         line-height: 0.9em;
+        font-size:3em;
     }
-}
 
-@media (min-width: 767px) { 
+    .lead {
+        font-size: 2em;
+        font-weight: 500;
+        span {
+            display: inline-block;
+
+            &:hover {
+                cursor: pointer;
+                border-bottom: 1px dotted black;
+            }
+        }
+    }
+
+    @media (min-width: 767px) { 
     .display-5 {
         font-weight: 900;
-        font-size: 5em;
+        font-size: 6em;
+    }
+
+    .lead {
+        span {
+            display: inline-block;
+        }
     }
  }
+
+}
+

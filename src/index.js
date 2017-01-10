@@ -7,7 +7,7 @@ import reduxThunk from 'redux-thunk';
 import './styles/style.scss';
 import App from './components/app';
 import Home from './components/home';
-import Public from './components/public';
+import Hack from './components/hack';
 import Secret from './components/secret';
 import Signin from './components/auth/signin';
 import Signup from './components/auth/signup';
@@ -29,7 +29,7 @@ ReactDOM.render(
     <Router history={hashHistory}>
       <Route path="/" component= {App}>
         <IndexRoute component= {Home} />
-        <Route path="/public" component= {Public} />
+        <Route path="/hack" component= {Hack} />
         <Route path="/secret" component= {RequireAuth(Secret)} />
 
         <Route path="/signin" component= {Signin} />

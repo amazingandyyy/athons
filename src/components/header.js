@@ -8,7 +8,7 @@ class Header extends Component {
         if (this.props.authenticated){
             return (
                 <li className="nav-item">
-                    <Link className="nav-link" to="/signout">Sign out</Link>
+                    <Link className="nav-link" to="/signout">Signout</Link>
                 </li>
             )
         }else{
@@ -31,7 +31,7 @@ class Header extends Component {
                 <span  className="float-left">
                     <ul className="nav navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/public">Public</Link>
+                            <Link className="nav-link" to="/hack">Hack</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/secret">Secret</Link>
@@ -55,23 +55,3 @@ function mapStateToProps({auth}){
 }
 
 export default connect(mapStateToProps, actions)(Header)
-
-// <nav
-//                 className="navbar navbar-fixed-top navbar-full navbar-dark bg-primary bg-faded">
-//                 <Link className="navbar-brand" to="/">MERN</Link>
-//                 <span  className="float-left">
-//                     <ul className="nav navbar-nav">
-//                         <li className="nav-item">
-//                             <Link className="nav-link" to="/public">Public</Link>
-//                         </li>
-//                         <li className="nav-item">
-//                             <Link className="nav-link" to="/secret">Secret</Link>
-//                         </li>
-//                     </ul>
-//                 </span>
-//                 <span className="float-right">
-//                     <ul className="nav navbar-nav">
-//                         {this.renderSignButton()}
-//                     </ul>
-//                 </span>
-//             </nav>

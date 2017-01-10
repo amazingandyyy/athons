@@ -1,6 +1,6 @@
 body {
     padding-top: 50px;
-    background-color: rgba(0,0,0,0.06);
+    background-color: rgba(0,0,0,0.0);
 }
 
 @media (min-width: 767px) { 
@@ -12,4 +12,6 @@ body {
 
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700,800');
 @import './header';
-@import './home'
+@import './home';
+@import './hack';
+@import './footer';
