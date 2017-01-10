@@ -11,7 +11,7 @@
     "deploy-gh-pages": "npm run build && git subtree push --prefix dist origin gh-pages",
     "deploy-s3": "npm run build && s3-website deploy dist"
   },
-  "author": "",
+  "author": "amazingandyyy",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.15.3",
